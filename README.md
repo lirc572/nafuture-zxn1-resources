@@ -25,7 +25,7 @@ You can get one from Taobao for only 4.9 CNY.
 |  GPIO12 |            Main LED            |
 |  GPIO4  |              DHT11             |
 |  GPIO2  |           ESP-12F LED          |
-|   ADC   | VCC through a voltage divider |
+|   ADC   |  VCC through a voltage divider |
 
 ## MicroPython Code
 

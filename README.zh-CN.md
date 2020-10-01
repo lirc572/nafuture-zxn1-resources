@@ -6,11 +6,11 @@
 
 ## 简介
 
-The Nafuture Zhixi-N1 is a low cost temperature and humidity sensor produced by [Nafuture](http://www.nafuture.cn/) (discontinued). It feafures an ESP-12F module (ESP8266), a DHT11 temerature sensor and **2** 200mAh LiPo batteries. It has a micro-USB port that you can use to charge the batteries and re-program the ESP-12F module with a custom UART programmer.
+光合未来-知悉N1是[光合未来](http://www.nafuture.cn/)推出的一款温湿度传感器（已停产）。这个传感器的核心是一个ESP-12F模块（ESP8266），温湿度检测由DHT11完成，由两块200mAh的锂电池供电，micro-USB口可用来充电/烧录程序。
 
-You can get one from Taobao for only 4.9 CNY.
+现在这个模块在淘宝上4.9元就可以买到（淘宝链接在底部）。
 
-## On-Board Components
+## 板载硬件
 
 - 1 X ESP-12F (with an LED)
 - 1 x DHT11
@@ -18,18 +18,18 @@ You can get one from Taobao for only 4.9 CNY.
 - 1 additional LED
 - 1 x push switch
 
-## Pinout References
+## 接口指引
 
 |   Pin   |          Connected to          |
 |:-------:|:------------------------------:|
 |  GPIO12 |            Main LED            |
 |  GPIO4  |              DHT11             |
 |  GPIO2  |           ESP-12F LED          |
-|   ADC   | VCC throught a voltage divider |
+|   ADC   |  VCC through a voltage divider |
 
-## MicroPython Code
+## MicroPython代码
 
-## Where to Buy
+## 购买链接
 
-- [Taobao link for the Nafuture ZhiXi-N1](https://m.tb.cn/h.Vzupfv7?sm=34d8ae)
-- [Xianyu link for the programmer](https://market.m.taobao.com/app/idleFish-F2e/widle-taobao-rax/page-detail?wh_weex=true&wx_navbar_transparent=true&id=626032002165&ut_sk=1.X23p8dbHZsEDAI2wCPftXkIY_21407387_1601553035380.Copy.detail.626032002165.3586168982&forceFlush=1)
+- [知悉N1淘宝链接](https://m.tb.cn/h.Vzupfv7?sm=34d8ae)
+- [烧录器闲鱼链接](https://market.m.taobao.com/app/idleFish-F2e/widle-taobao-rax/page-detail?wh_weex=true&wx_navbar_transparent=true&id=626032002165&ut_sk=1.X23p8dbHZsEDAI2wCPftXkIY_21407387_1601553035380.Copy.detail.626032002165.3586168982&forceFlush=1)
