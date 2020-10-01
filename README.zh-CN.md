@@ -1,10 +1,10 @@
 # nafuture-zxn1-resources
 
-Resources for Nafuture ZhiXi-N1
+光合未来-知悉N1的资料
 
-English | [简体中文](./README.zh-CN.md)
+[English](./README.md) | 简体中文
 
-## Introduction
+## 简介
 
 The Nafuture Zhixi-N1 is a low cost temperature and humidity sensor produced by [Nafuture](http://www.nafuture.cn/) (discontinued). It feafures an ESP-12F module (ESP8266), a DHT11 temerature sensor and **2** 200mAh LiPo batteries. It has a micro-USB port that you can use to charge the batteries and re-program the ESP-12F module with a custom UART programmer.
 
@@ -25,7 +25,7 @@ You can get one from Taobao for only 4.9 CNY.
 |  GPIO12 |            Main LED            |
 |  GPIO4  |              DHT11             |
 |  GPIO2  |           ESP-12F LED          |
-|   ADC   | VCC through a voltage divider |
+|   ADC   | VCC throught a voltage divider |
 
 ## MicroPython Code
 
