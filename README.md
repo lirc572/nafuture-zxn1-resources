@@ -10,6 +10,14 @@ The Nafuture Zhixi-N1 is a low cost temperature and humidity sensor produced by 
 
 You can get one from Taobao for only 4.9 CNY.
 
+![XZN1](./res/zxn1-cover.jpg)
+
+![XZN1 front](./res/zxn1-front.jpg)
+
+![XZN1 back](./res/zxn1-back.jpg)
+
+![XZN1 Programmer](./res/programmer.jpg)
+
 ## On-Board Components
 
 - 1 X ESP-12F (with an LED)
@@ -18,7 +26,7 @@ You can get one from Taobao for only 4.9 CNY.
 - 1 additional LED
 - 1 x push switch
 
-## Pinout References
+## ESP-12F Pin References
 
 |   Pin   |          Connected to          |
 |:-------:|:------------------------------:|
@@ -26,8 +34,36 @@ You can get one from Taobao for only 4.9 CNY.
 |  GPIO4  |              DHT11             |
 |  GPIO2  |           ESP-12F LED          |
 |   ADC   |  VCC through a voltage divider |
+|   TXD0  |          Micro-USB D+          |
+|   RXD0  |          Micro-USB D-          |
+|  GPIO0  |          Micro-USB ID          |
+
+## Measure VCC (battery) Voltage
+
+Part of the circuit:
+
+```
+            ___ VCC
+             |
++-----+    <4.7K>
+| ... |      |
+| ADC |------+
+| ... |      |
++-----+    <1K>
+            _|_ 
+               GND
+
+```
+
+Since the ESP8266's ADC is 10-bit (0-1023) from 0 to 1V, the voltage can be calculated based from the ADC reading as follows:
+
+```
+voltage = ADC_reading / 1024 / 10 * 57
+```
 
 ## MicroPython Code
+
+See [./upython](./upython)
 
 ## Where to Buy
 
