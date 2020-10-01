@@ -61,9 +61,28 @@ Since the ESP8266's ADC is 10-bit (0-1023) from 0 to 1V, the voltage can be calc
 voltage = ADC_reading / 1024 / 10 * 57
 ```
 
-## MicroPython Code
+## How to Update the Firmware of ZXN1 with [the Programmer](https://market.m.taobao.com/app/idleFish-F2e/widle-taobao-rax/page-detail?wh_weex=true&wx_navbar_transparent=true&id=626032002165&ut_sk=1.X23p8dbHZsEDAI2wCPftXkIY_21407387_1601553035380.Copy.detail.626032002165.3586168982&forceFlush=1) (or you can make a programmer yourself using a micro-USB breakout board and a common USB-UART programmer)
+
+- Connect the programmer to your computer and your ZXN1
+- Run the firmware flashing program on your computer (esptool)
+- Press the `flash` key on the programmer, while it's being pressed, start (or restart) your ZXN1
+- Wait for the flashing to finish
+
+## MicroPython Sample Code
+
+The MicroPython code in this repository simply does a one time measurement of the temperature, humidity and battery voltage on start, and put the values into a string which is broadcasted as a WiFi SSID. You can then check the values from your phone's WiFi settings: (Nothing will happen if you connect to the AP)
+
+![WiFi](./res/wifi.jpg)
 
 See [./upython](./upython)
+
+### How to Use
+
+- Install [Thonny IDE](https://thonny.org/) (recommended)
+- Download the latest micropython firmware (currently V1.13) for ESP8266 from <https://micropython.org/download/>
+- Upload the firmware to your ZXN1 through Thonny (or esptool if you know how to use it)
+- Upload `battery.py`, `sensor.py`, `main.py` to your ZXN1 using Thonny
+- Restart your ZXN1 to run the code
 
 ## Where to Buy
 

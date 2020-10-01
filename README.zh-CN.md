@@ -61,9 +61,28 @@ ESP8266的ADC返回值在0（0V）和1024（1V）之间。由ADC返回值可以�
 VCC电压 = ADC返回值 / 1024 / 10 * 57
 ```
 
-## MicroPython代码
+## 使用[下载器](https://market.m.taobao.com/app/idleFish-F2e/widle-taobao-rax/page-detail?wh_weex=true&wx_navbar_transparent=true&id=626032002165&ut_sk=1.X23p8dbHZsEDAI2wCPftXkIY_21407387_1601553035380.Copy.detail.626032002165.3586168982&forceFlush=1)更新ZXN1的固件（也可自己用micro-USB转接板和一般的USB-UART下载器做一个）
 
-见 [./upython](./upython)
+- 把下载器连接上电脑和ZXN1
+- 运行烧录程序（esptool）
+- 按住下载器上的`flash`按键，同时打开（或重启）ZXN1
+- 耐心等待烧录结束
+
+## MicroPython测试程序
+
+本仓库中的MicroPython程序在ZXN1开机时测量温度、湿度及电池电压，并把测量结果设置成ESP8266上AP模式的SSID。手机WiFi设置页就可以看到测量结果：（连接这个AP没有任何效果）
+
+![WiFi](./res/wifi.jpg)
+
+详见 [./upython](./upython)
+
+### How to Use
+
+- Install [Thonny IDE](https://thonny.org/) (recommended)
+- Download the latest micropython firmware (currently V1.13) for ESP8266 from <https://micropython.org/download/>
+- Upload the firmware to your ZXN1 through Thonny (or esptool if you know how to use it)
+- Upload `battery.py`, `sensor.py`, `main.py` to your ZXN1 using Thonny
+- Restart your ZXN1 to run the code
 
 ## 购买链接
 
